@@ -223,41 +223,63 @@ Los apartados 6.1 y 6.2 corresponden a las descripciones detalladas de UC-05 y U
 
 ### 6.1 Descripción detallada UC-05 — Actualizar perfil
 
-**Identificador y nombre del caso de uso:** [Indica el caso.]
+**Identificador y nombre del caso de uso:** Actualizar el perfil
 
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
+**Objetivo:** El participante pretende consultar y modificar sus datos propios
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:** Actor principal: El usuario
 
-**Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+**Precondiciones:** Una cuenta activa del usuario y sesión iniciada.
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:** El usuario quiere modificar parte de sus datos registrados
 
-**Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
+**Escenario principal de éxito:** El usuario modifica los campos necesarios, confirma la operación, y al comprobar su perfil sus datos han sido cambiados.
+1  El usuario solicita actualizar su perfil.
+2. El sistema presenta los datos actuales y distingue los valores editables de los que permanecen fijos.
+3. El usuario modifica los valores permitidos
+4. El usuario solicita guardar los cambios.
+5. El sistema comprueba los datos según las reglas del acta.
+6. El sistema guarda los datos.
+7. El sistema confirma la actualización.
+8. El caso de uso finaliza
 
-**Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
+**Extensiones (flujos alternativos):** 
+5a) Falta un dato obligatorio o un dato no cumple su formato.
+*a) El usuario cancela antes de guardar.
+6a) El sistema no puede guardar.
 
-**Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
+**Postcondiciones:** Si el usuario confirma la modificación de sus datos, sus datos quedan actualizados, si se cancela la operación, se mantienen los datos anteriores.
 
-**Reglas y NFR pertinentes:** [Remite a los requisitos y actas que condicionan el comportamiento.]
+**Reglas y NFR pertinentes:** UR-03, FR-019 y el acta de acuerdos de uc-05
 
-**Preguntas abiertas:** [Registra solo las cuestiones necesarias que las fuentes no resuelvan. Si no hay preguntas para el alcance descrito, indícalo.]
+**Preguntas abiertas:** 
 
 ### 6.2 Descripción detallada UC-21 — Buscar recetas
 
-**Identificador y nombre del caso de uso:** [Indica el caso.]
+**Identificador y nombre del caso de uso:** UC-21 Buscar recetas
 
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
+**Objetivo:** Concretar el comportamiento de la búsqueda de recetas
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:** El usuario
 
-**Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+**Precondiciones:** Que el usuario esté registrado y tenga una sesión iniciada.
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:** El usuario pretende buscar recetas siguiendo un criterio
 
-**Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
+**Escenario principal de éxito:** 
+1. El usuario solicita buscar recetas con ciertos ingredientes o sin ellos
+2. El sistema comprueba la disponibilidad de recetas que cumplan esos requisitos
+3. El sistema muestra las posibles opciones al usuario.
+4. El caso de uso finaliza
+   
 
-**Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
+**Extensiones (flujos alternativos):** 
+2 a) Incluir y excluir el mismo ingrediente
+        - El sistema señala el error y no deja continuar hasta que se corrija
+        - El usuario quita la exclusión o inclusión
+        - El sistema permite proseguir la búsqueda 
+3 a) 
+
 
 **Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
 
