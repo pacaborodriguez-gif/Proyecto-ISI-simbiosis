@@ -15,7 +15,7 @@
 
 ## Épica de búsqueda
 
-Como [rol], quiero [capacidad amplia], para [beneficio].
+Como cliente, quiero poder realizar una búsqueda avanzada, para encontrar recetas según ciertos criterios.
 
 **Estado:** descompuesta en US-01, US-02 y US-03. Conserva la necesidad conjunta.
 
@@ -25,45 +25,45 @@ Como [rol], quiero [capacidad amplia], para [beneficio].
 
 ## US-01
 
-**Título:** [Capacidad]
+**Título:** Buscar mediante una palabra o frase
 
-Como [rol], quiero [capacidad], para [beneficio].
+Como cliente, quiero poder buscar una receta con una palabra o frase, para poder encontrarla fácilmente.
 
-**Fuentes:** UR-08; UC-21; [FR principal]; acta, [apartado pertinente].
+**Fuentes:** UR-08; UC-21; FR-085; acta, [apartado pertinente].
 
 ### Criterios de aceptación
 
-- **CA-01.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-02.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-03.** Dado [situación], cuando [acción], entonces [resultado observable].
+- **CA-01.** Dada una palabra o frase, cuando se busque, entonces mostrar recetas que la contienen.
+- **CA-02.** Dado que no se escriba con las tildes o mayúsculas necesarias, cuando se busque la palabra o frase, entonces se mostrará la receta válida igualmente.
+- **CA-03.** Dado que no haya recetas que cumplan los criterios, cuando se busque esa palabra o frase, entonces se mostrará que no hay resultados existentes.
 
 ## US-02
 
-**Título:** [Capacidad]
+**Título:** Buscar por ingredientes incluidos
 
-Como [rol], quiero [capacidad], para [beneficio].
+Como cliente, quiero poder escoger o excluir ciertos ingredientes, para que se muestren recetas que se correspondan con mis necesidades.
 
 **Fuentes:** UR-08; UC-21; [FR principal]; acta, [apartado pertinente].
 
 ### Criterios de aceptación
 
-- **CA-01.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-02.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-03.** Dado [situación], cuando [acción], entonces [resultado observable].
+- **CA-01.** Dado que se selecciona el mismo ingrediente para incluirlo e excluirlo, cuando se realice la búsqueda, entonces no se ejecuta la búsqueda hasta que se corrija el error.
+- **CA-02.** Dado que ninguna receta contiene los ingredientes, cuando se realice la búsqueda, entonces se indica que no hay resultados coincidentes.
+- **CA-03.** Dado que se seleccionan unos ingredientes, cuando se realice la búsqueda, entonces se deberán mostrar todas las recetas que contengan todos los ingrdiente seleccionados.
 
 ## US-03
 
-**Título:** [Capacidad]
+**Título:** Excluir ingredientes
 
-Como [rol], quiero [capacidad], para [beneficio].
+Como cliente de una tienda online, quiero poder excluir ingredientes de mis búsquedas, para que las recetas proporcionadas no los tengan.
 
 **Fuentes:** UR-08; UC-21; [FR principal]; acta, [apartado pertinente].
 
 ### Criterios de aceptación
 
-- **CA-01.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-02.** Dado [situación], cuando [acción], entonces [resultado observable].
-- **CA-03.** Dado [situación], cuando [acción], entonces [resultado observable].
+- **CA-01.** Dado que se excluye un ingrediente, cuando se realicen sugerencias de recetas, entonces se mostrarán recetas que no contengan dicho ingrediente.
+- **CA-02.** Dado que se han excluido ingredientes anteriormente, cuando se vuelve a los resultados, entonces se conservan los criterios de la última búsqueda.
+- **CA-03.** Dado que se selecciona el mismo ingrediente para incluirlo e excluirlo, cuando se realice la búsqueda, entonces no se ejecuta la búsqueda hasta que se corrija el error.
 
 ## Revisión INVEST
 
